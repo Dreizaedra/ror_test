@@ -49,3 +49,9 @@
 # Ignore Docker-related files
 /.dockerignore
 /Dockerfile*
+
+# Ignore python related files
+/.venv
+.pre-commit-config.yaml
+.cz.yaml
+requirements.txt
