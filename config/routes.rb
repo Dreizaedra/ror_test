@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resource :session
+  resources :passwords, param: :token
   get "up" => "rails/health#show", as: :rails_health_check
 
   get "/products", to: "products#index", as: "products"
@@ -8,4 +10,6 @@ Rails.application.routes.draw do
   delete "/products/:id", to: "products#destroy", as: "destroy_product"
   patch "/products/:id", to: "products#update", as: "update_product"
   get "/products/:id", to: "products#show", as: "product"
+
+  root "products#index"
 end
